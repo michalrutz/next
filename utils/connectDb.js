@@ -7,7 +7,8 @@ async function connectDb() {
     console.log("Using existing connection");
     return;
   }
-  const DB = process.env.DATABASE.replace(
+  const DATABASE="mongodb+srv://Michal:<password>@cluster0-vxluw.mongodb.net/test?retryWrites=true&w=majority",
+  const DB = DATABASE.replace(
     "<password>",
     process.env.DATABASE_PASSWORD
   );
