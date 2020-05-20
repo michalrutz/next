@@ -1,6 +1,6 @@
 const baseUrl =
   process.NODE_ENV === "production"
-    ? "http://deployment-url.now.sh"
+    ? "https://michal-next-app.herokuapp.com/"
     : "http://localhost:3000";
 
 export default baseUrl;

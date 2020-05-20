@@ -1,7 +1,5 @@
 import mongoose from "mongoose";
 let connection = {};
-let DATABASE =
-  "mongodb+srv://Michal:<password>@cluster0-vxluw.mongodb.net/test?retryWrites=true&w=majority";
 
 async function connectDb() {
   if (connection.isConnected) {
@@ -11,7 +9,7 @@ async function connectDb() {
     return;
   }
 
-  const DB = DATABASE.replace("<password>", process.env.DATABASE_PASSWORD);
+  const DB = process.env.DATABASE.replace("<password>", process.env.DATABASE_PASSWORD);
 
   // Use new database connection
   const db = await mongoose.connect(DB, {
