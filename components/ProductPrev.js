@@ -2,7 +2,7 @@ import React, { isValidElement } from "react";
 import Link from "next/link";
 
 function ProduktCard({ item }) {
-  const { _id, name, price, description } = item;
+  const { _id, name, price, description,  } = item;
   return (
     <>
       <div key={_id}>

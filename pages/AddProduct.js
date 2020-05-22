@@ -67,9 +67,10 @@ function AddProduct() {
     setLoading(true);
     setErrMsg("");
     const url = `${baseUrl}/api/product`;
+    // get data
     const name = document.getElementById("name").value;
     const price = document.getElementById("price").value;
-
+    // create product
     const res = await fetch(url, {
       method: "POST",
       body: JSON.stringify({ product: { name, price } }),
